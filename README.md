@@ -3,3 +3,4 @@ In this repository all the files includes the backend code for Inshare Applicati
 
 # Heroku APP Link
 <a href="https://inshare-app-backend.herokuapp.com/">inshare-app-backend</a>
+check with INSOMNIA plz
