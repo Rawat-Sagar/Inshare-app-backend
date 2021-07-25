@@ -2,7 +2,7 @@ const router = require('express').Router();
 const File = require('../models/file');
 
 
-router.get("/:uuid", async (req, res) => {
+router.get('/:uuid', async (req, res) => {
     // check the database for the uuid them download the file
   const file = await File.findOne({uuid:req.params.uuid});
   if(!file){

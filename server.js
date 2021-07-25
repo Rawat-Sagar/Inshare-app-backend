@@ -1,21 +1,21 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const path = require('path');
 
 // for css and static view.
 app.use(express.static('public'));
-// for using express json
-app.use(express.json());
+
 
 const connectDB = require('./config/db.js');
 connectDB();
 
+app.use(express.json());
 
 // Template Engine
 app.set('views',path.join(__dirname,'/views'));
-app.set('view engine','ejs')
+app.set('view engine','ejs');
 
 
 // Routes
