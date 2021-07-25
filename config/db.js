@@ -15,6 +15,8 @@ function connectDB() {
 
     connection.once('open', () => {
         console.log("DataBase Connected");
+    }).catch((err) => {
+        console.log("Connection Failed");
     });
 }
 
