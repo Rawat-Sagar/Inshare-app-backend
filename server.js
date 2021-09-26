@@ -24,6 +24,7 @@ app.use(express.json());
 app.set('views',path.join(__dirname,'/views'));
 app.set('view engine','ejs');
 
+app.options('*', cors(corsOptions)) // include before other routes
 
 // Routes
 app.use('/api/files', require('./routes/files'));
